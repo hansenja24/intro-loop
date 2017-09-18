@@ -1,13 +1,23 @@
 $ (document).ready(function(){
-  jQuery("h1").click(function() {
-    alert("This is a header.");
+
+  var tags =["h1", "p", "img"];
+  var text = ["a header", "a paragraph", "an image"];
+
+  tags.forEach(function(tag) {
+    $(tag).click(function() {
+      alert("This is "+text[tags.indexOf(tag)]+".");
+    });
   });
 
-  jQuery("p").click(function() {
-    alert("This is a paragraph.");
-  });
-
-  jQuery("img").click(function() {
-    alert("This is an image.");
-  });
+  // $("h1").click(function() {
+  //   alert("This is a header.");
+  // });
+  //
+  // $("p").click(function() {
+  //   alert("This is a paragraph.");
+  // });
+  //
+  // $("img").click(function() {
+  //   alert("This is an image.");
+  // });
 });
